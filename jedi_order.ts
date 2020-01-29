@@ -167,6 +167,7 @@ let mainJediOrder = () => {
     
     evaluador.evaluarAscenso(pepe)
     console.log(pepe.cantMisiones)
+    
     console.log(pepe.estado.toString())
     evaluador.evaluarAscenso(clonPepe)
 
