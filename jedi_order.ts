@@ -15,7 +15,7 @@ class Jedi
     }
 
     //Prototype
-    clonar() : Jedi
+    /*clonar() : Jedi
     {
         let j = new Jedi()
         j.cantMisiones = this.cantMisiones
@@ -23,6 +23,8 @@ class Jedi
         j.estado = this.estado
         return j
     }
+    Lo dejamos porque en TS se comporta de manera extraña
+    */
 }
 
 abstract class EstadoJedi
@@ -161,18 +163,18 @@ let mainJediOrder = () => {
     pepe.cantMisiones = 23
     pepe.nivelFuerza = 300
     
-    let clonPepe = pepe.clonar()
+    //let clonPepe = pepe.clonar()
 
     let evaluador = Evaluador.getInstance()
     
     evaluador.evaluarAscenso(pepe)
     console.log(pepe.cantMisiones)
-    
+
     console.log(pepe.estado.toString())
-    evaluador.evaluarAscenso(clonPepe)
+    //evaluador.evaluarAscenso(clonPepe)
 
     console.log(`El estado de Pepe es : ${pepe.estado.toString()}`)
-    console.log(`El estado de Clon Pepe es : ${clonPepe.estado.toString()}`)
+    //console.log(`El estado de Clon Pepe es : ${clonPepe.estado.toString()}`)
 }
 
 mainJediOrder()
